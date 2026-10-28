@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSKM UMT HACKATHON</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>PENYU HACKATHON</h1>
+        <h1>Code and solve our ocean</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <article>
+            <h3>Activities</h3>
+            <p>Penyu Hackathon was FSKM UMT Hackathon challenge. This challenge focussing on ocean and aquatic problem that can be solve by coding.</p>
+        </article>
+        <article>
+            <h3>Judges</h3>
+            <p>We invites Prof. Ts. Dr. Muhammad Suzuri bin Hitam</p>
+        </article>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+        <h2>Schedule</h2>
+        <article>
+            <h2>Date</h2>
+            <p>Our event on 23th December 2026</p>
+        </article>
+        
+        <h2>Table</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activities</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0800</td>
+                    <td>Arrives</td>
+                    <td>DSM</td>
+                    <td>Puan Ainul</td>
+                </tr>
+                <tr>
+                    <td>1000</td>
+                    <td>Challenge Start</td>
+                    <!-- Example of rowspan usage -->
+                    <td rowspan="2">DSM</td>
+                    <td>Puan Siti</td>
+                </tr>
+                <tr>
+                    <td>1200</td>
+                    <!-- Example of colspan usage -->
+                    <td colspan="2">Break & Networking Session</td>
+                </tr>
+                <tr>
+                    <td>1400</td>
+                    <td>Second Challenge Start</td>
+                    <td>DSM</td>
+                    <td>Puan Lisa</td>
+                </tr>
+                <tr>
+                    <td>1600</td>
+                    <td>Winner Announce</td>
+                    <td>DSM</td>
+                    <td>Tuan Abu</td>
+                </tr>
+                <tr>
+                    <td>1800</td>
+                    <td>End</td>
+                    <td>DSM</td>
+                    <td>Tuan Ali</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register">
+        <h2>Registration</h2>
+        <article>
+            <h2>Fill in the form</h2>
+            <p>Join us by fill the form</p>
+        </article>
+    </section>
+
+    <!-- Registration Form -->
+    <h2>Registration Form</h2>
+    <form action="register.html" method="post">
+        
+        <!-- Text Inputs -->
+        <label for="fname">Full Name:</label><br>
+        <input type="text" id="fname" name="fullname"><br><br>
+
+        <label for="matric">Matric Number:</label><br>
+        <input type="text" id="matric" name="matric"><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Radio Buttons for Year of Study -->
+        <label>Year of Study:</label><br>
+        <input type="radio" id="year1" name="year_of_study" value="Year 1">
+        <label for="year1">Year 1</label><br>
+        <input type="radio" id="year2" name="year_of_study" value="Year 2">
+        <label for="year2">Year 2</label><br>
+        <input type="radio" id="year3" name="year_of_study" value="Year 3">
+        <label for="year3">Year 3</label><br>
+        <input type="radio" id="year4" name="year_of_study" value="Year 4">
+        <label for="year4">Year 4</label><br><br>
+
+        <!-- Dropdown for Programme / Faculty -->
+        <label for="programme">Programme:</label><br>
+        <select id="programme" name="programme">
+            <option value="cs">Computer Science</option>
+            <option value="software">Software Engineering</option>
+            <option value="data">Data Science</option>
+            <option value="network">Network Computing</option>
+        </select><br><br>
+
+        <!-- Checkboxes for Sessions -->
+        <label>Sessions to Join:</label><br>
+        <input type="checkbox" id="session1" name="sessions" value="Opening">
+        <label for="session1">Opening & Arrival</label><br>
+        <input type="checkbox" id="session2" name="sessions" value="Coding">
+        <label for="session2">Coding Challenge</label><br>
+        <input type="checkbox" id="session3" name="sessions" value="Closing">
+        <label for="session3">Winner Announcement</label><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy 2026 FSKM UMT</p>
+    </footer>
+
+</body>
+</html>

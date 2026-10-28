@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Page</title>
+</head>
+<body>
+
+    <!-- Task 3: Header Tag -->
+    <header>
+        <h1>Welcome to My Personal Profile Page</h1>
+    </header>
+
+    <!-- Task 3: Navigation Links -->
+    <nav>
+        <a href="#profile">Profile Table</a> | 
+        <a href="#form">Registration Form</a>
+    </nav>
+
+    <hr>
+
+    <!-- Main Section grouping content -->
+    <section>
+
+        <!-- Task 1: Table with at least 3 rows and 3 columns -->
+        <article id="profile">
+            <h2>Personal Information</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Occupation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>25</td>
+                        <td>Web Developer</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>28</td>
+                        <td>Data Analyst</td>
+                    </tr>
+                    <tr>
+                        <td>Alex Johnson</td>
+                        <td>22</td>
+                        <td>UI/UX Designer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <hr>
+
+        <!-- Task 2: Form collecting basic user information -->
+        <article id="form">
+            <h2>User Registration Form</h2>
+            <form action="submit_form.php" method="post">
+                
+                <!-- Text Input: Name -->
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <!-- Text Input: Email -->
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <!-- Radio Buttons: Gender -->
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+
+                <!-- Checkboxes: Favorite Hobbies -->
+                <label>Favorite Hobbies:</label><br>
+                <input type="checkbox" id="reading" name="hobbies" value="Reading">
+                <label for="reading">Reading</label><br>
+                <input type="checkbox" id="gaming" name="hobbies" value="Gaming">
+                <label for="gaming">Gaming</label><br>
+                <input type="checkbox" id="coding" name="hobbies" value="Coding">
+                <label for="coding">Coding</label><br><br>
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit">
+
+            </form>
+        </article>
+
+    </section>
+
+    <!-- Task 3: Footer Tag -->
+    <footer>
+        <p>&copy; 2026 My Web Page. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

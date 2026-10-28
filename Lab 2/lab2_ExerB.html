@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    <!-- Error 1 (Line 10): Incorrect closing tag </head> used instead of </header> -->
+    </header>
+    
+    <!-- Navigation (Updated with link to Student Comments section) -->
+    <nav>
+        <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comments">Student Comments</a>
+    </nav>
+    
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table border="1">
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <td>Rating</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introduction to HTML</td>
+                <td>4.5</td>
+            <!-- Error 2 (Line 26): Missing closing tag </tr> for the first table row -->
+            </tr>
+            <tr>
+                <td>2</td>
+                <!-- Error 3 (Line 28): Incorrect colspan="3" (table only has 2 remaining columns, should be colspan="2") -->
+                <td colspan="2">Tables and Forms</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <!-- Error 4 (Line 32): Missing closing tag </td> before <td>4.0 -->
+                <td>Semantic HTML</td>
+                <td>4.0</td>
+            </tr>
+            <!-- New Table Rows for Week 4, Week 5, and Average Rating -->
+            <tr>
+                <td>4</td>
+                <td rowspan="2">Mini Project</td>
+                <td>4.2</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>4.8</td>
+            </tr>
+            <tr>
+                <td colspan="2">Average Rating</td>
+                <td>4.38</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Student Comments Section (New Section) -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        <article>
+            <h3>Ahmad Zaki</h3>
+            <p>The course has been very practical so far. Building the lab exercises really helped me understand semantic structure and forms!</p>
+        </article>
+        <article>
+            <h3>Siti Nurhaliza</h3>
+            <p>I really enjoyed the Mini Project weeks. Looking forward to learning more advanced web development techniques.</p>
+        </article>
+    </section>
+    
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            <!-- Error 5 (Line 39): Mismatched id in label for="name" (input id is "fullname") -->
+            <label for="fullname">Name:</label>
+            <input type="text" id="fullname" name="name"><br>
+
+            <!-- New E-mail Input Field -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br>
+            
+            <label>Overall rating:</label><br>
+            <!-- Error 6 (Line 42-44): Radio buttons for rating do not share the same name attribute ("good" vs "poor"), preventing proper mutually exclusive selection -->
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label>
+            <!-- New Third Radio Option "Average" -->
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label>
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label><br>
+            
+            <!-- Error 7 (Line 46): Mismatched id/for attributes between checkbox id="lab" and label for="labs" -->
+            <input type="checkbox" id="labs" name="lab" value="yes">
+            <label for="labs">I attended all labs</label><br>
+
+            <!-- New Group of Checkboxes for Topics -->
+            <label>Topics I want more practice on:</label><br>
+            <input type="checkbox" id="topic_tables" name="practice_topics" value="tables">
+            <label for="topic_tables">Tables and Spans</label><br>
+            <input type="checkbox" id="topic_forms" name="practice_topics" value="forms">
+            <label for="topic_forms">Forms and Inputs</label><br>
+            <input type="checkbox" id="topic_semantic" name="practice_topics" value="semantic">
+            <label for="topic_semantic">Semantic Elements</label><br>
+
+            <!-- New Dropdown (<select>) for Section/Group -->
+            <label for="section">Section / Group:</label><br>
+            <select id="section" name="section">
+                <option value="sec1">Section 1 (Monday)</option>
+                <option value="sec2">Section 2 (Wednesday)</option>
+                <option value="sec3">Section 3 (Friday)</option>
+            </select><br>
+            
+            <input type="submit" value="Submit">
+        <!-- Error 8 (Line 49): Typo in form closing tag </from> instead of </form> -->
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy Copyright 2026 CSF3133</p>
+    </footer>
+</body>
+</html>
