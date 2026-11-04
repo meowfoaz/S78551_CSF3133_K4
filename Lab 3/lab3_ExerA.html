@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balqis Bakery & Cake</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+-         <h1>Balqis Bakery and Cake <span>Your happiness are our smile
+</span></h1>
+    </div>
+
+    <!-- Navigation Bar Section -->
+    <div id="nav">
+        <a href="#home">Home</a> |
+        <a href="#menu">Menu</a> |
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="content">
+        <h2><em>We serve UMT student and Staff since 2010.We show love with bake and pastry.</em></h2>
+-         <p>Eventho we face a lot of problem and hardship we together create the stable foundation of bakery shop inside our lovely UMT<span>There nothing can destroy us
+</span></p>
+        <p>We do:</p>
+        <ul>
+            <li>Cake</li>
+            <li>Pastry</li>
+            <li>Cofee</li>
+            <li>Tea</li>
+        </ul>
+
+        <!-- Order Form Section -->
+        <form action="#" method="post" oninput="total.value = (parseInt(cupcakes.value || 0) * 3) + (parseInt(cake_slices.value || 0) * 5)">
+            <h3>Order Form</h3>
+            
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required autofocus><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 012-3456789" required><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+
+            <label for="pickup-date">Pick-up Date:</label>
+            <input type="date" id="pickup-date" name="pickup_date"><br><br>
+
+            <label for="pickup-time">Pick-up Time:</label>
+            <input type="time" id="pickup-time" name="pickup_time"><br><br>
+
+            <label for="flavour">Flavour:</label>
+            <input type="text" id="flavour" name="flavour" list="flavour-list" placeholder="Choose or type a flavour">
+            <datalist id="flavour-list">
+                <option value="Chocolate"></option>
+                <option value="Vanilla"></option>
+                <option value="Red Velvet"></option>
+                <option value="Pandan"></option>
+                <option value="Strawberry"></option>
+            </datalist><br><br>
+
+            <!-- Price Calculator Section -->
+            <h4>Price Calculator</h4>
+            <label for="cupcakes">Cupcakes (RM 3.00 each):</label>
+            <input type="number" id="cupcakes" name="cupcakes" min="0" value="0"><br><br>
+
+            <label for="cake_slices">Cake Slices (RM 5.00 each):</label>
+            <input type="number" id="cake_slices" name="cake_slices" min="0" value="0"><br><br>
+
+            <label for="total">Total Price (RM):</label>
+            <output id="total" name="total" for="cupcakes cake_slices">0</output><br><br>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+
+    <!-- Sidebar Section -->
+    <div id="sidebar">
+        <h2>BalqisBakery&reg; Price List</h2>
+        <ul>
+            <li>Croissant &mdash; &pound;2.50</li>
+            <li>Macrons &mdash; &pound;1.80</li>
+            <li>Chocolate Cupcake &mdash; &pound;2.00</li>
+            <li>Redvelvet Cake &mdash; &pound;2.20</li>
+        </ul>
+        <p>Note: Orders &gt; 10 pieces get a hot latte!</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <p>&copy; 2026 BalqisBakery&reg;&nbsp;|&nbsp;All Rights Reserved.</p>
+    </div>
+</body>
+</html>
