@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Terengganu - Student & Visitor Promotion</title>
+  
+  <!-- link style.css for style sheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- internal css for specific elements on this page -->
+  <style>
+    /* style for tagline under main title */
+    .hero-tagline {
+      font-style: italic;
+      color: #ffd700;
+      font-size: 1.1rem;
+    }
+
+    /* badge styling for main portal header */
+    #state-badge {
+      border: 2px dashed #ffffff;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- header section with title and navigation bar -->
+  <header>
+    <h1>Beautiful Terengganu</h1>
+    <p class="hero-tagline">Experience Terengganu with us</p>
+    <div id="state-badge">Official Visitor Portal</div>
+
+    <!-- main navigation menu with links to sections -->
+    <nav>
+      <ul>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#video">Promo Video</a></li>
+        <li><a href="#trip">Trip Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- section 1: destination articles -->
+    <section id="destinations">
+      <h2>Top Terengganu Attractions</h2>
+      <p class="section-intro">Explore our handpicked student and family promotional packages.</p>
+
+      <div class="destinations-container">
+        <!-- destination 1: redang island -->
+        <article class="card">
+          <h3>Pulau Redang Escape</h3>
+          <p>Crystal clear turquoise waters, world-class snorkeling, and white sandy beaches await you.</p>
+          <p class="price">
+            Promotion Price: <span class="old-price">RM 450</span> <span class="new-price">RM299</span>
+          </p>
+        </article>
+
+        <!-- destination 2: islamic heritage park -->
+        <article class="card">
+          <h3>Taman Tamadun Islam</h3>
+          <p>Marvel at replicas of famous global Islamic architecture and the breathtaking Crystal Mosque.</p>
+          <p class="price">
+            Promotion Price: <span class="old-price">RM 80</span> <span class="new-price">RM 45</span>
+          </p>
+        </article>
+
+        <!-- destination 3: pasar payang tour -->
+        <article class="card">
+          <h3>Pasar Payang & Heritage Walk</h3>
+          <p>Shop for traditional Batik, Songket, and sample famous local delicacies like Keropok Lekor.</p>
+          <p class="price">
+            Promotion Price: <span class="old-price">RM 120</span> <span class="new-price">RM 75</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- section 2: video showcase -->
+    <section id="video">
+      <h2>Experience Terengganu</h2>
+      
+      <!-- video element with controls and figure caption below -->
+      <figure class="video-wrapper">
+        <video width="640" height="360" controls poster="https://via.placeholder.com/640x360?text=Discover+Terengganu">
+          <source src="terengganu-promo.mp4" type="video/mp4">
+          Your browser does not support the HTML5 video element.
+        </video>
+        <figcaption class="caption">
+          Watch: A glimpse into Terengganu's pristine islands, heritage sites, and local culture.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- section 3: trip progress meter and registration form -->
+    <section id="trip">
+      <h2>Join the Student & Visitor Excursion</h2>
+
+      <!-- meter showing filled seats -->
+      <div class="capacity-box">
+        <label for="seat-meter"><strong>Trip Capacity Progress:</strong></label><br>
+        <meter id="seat-meter" min="0" max="40" value="28">28 out of 40 seats filled</meter>
+        <p><strong>28 / 40</strong> seats reserved. Hurry, grab your promo slot today!</p>
+      </div>
+
+      <!-- interest registration form -->
+      <form class="trip-form" action="#" method="post">
+        <h3>Register Your Interest</h3>
+
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="e.g. Muhammad Fauzan" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail Address:</label>
+          <input type="email" id="email" name="email" placeholder="e.g. student@umt.edu.my" required>
+        </div>
+
+        <!-- radio choices for visitor type -->
+        <fieldset class="form-group">
+          <legend>Traveller Type:</legend>
+          <label><input type="radio" name="traveller_type" value="student" checked> Student</label>
+          <label><input type="radio" name="traveller_type" value="staff"> Staff</label>
+          <label><input type="radio" name="traveller_type" value="public"> Public</label>
+        </fieldset>
+
+        <!-- checkboxes for travel interests -->
+        <fieldset class="form-group">
+          <legend>Interests (Select all that apply):</legend>
+          <label><input type="checkbox" name="interests" value="islands"> Islands</label>
+          <label><input type="checkbox" name="interests" value="food"> Food</label>
+          <label><input type="checkbox" name="interests" value="culture"> Culture</label>
+          <label><input type="checkbox" name="interests" value="nature"> Nature</label>
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- footer with copyright and contact info -->
+  <footer>
+    <p>&copy; 2026 Terengganu State Tourism Department. All rights reserved.</p>
+    <address>
+      Questions? Email us at: <a href="mailto:info@tourism.terengganu.gov.my">info@tourism.terengganu.gov.my</a>
+    </address>
+  </footer>
+
+</body>
+</html>
