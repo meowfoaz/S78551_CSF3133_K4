@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Part 2 (Task 7): Added responsive viewport meta tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>e-Café Campus</title>
+
+<!-- Part 2 (Task 5): Link external style sheet -->
+<link rel="stylesheet" href="cafe.css">
+
+<style>
+/* Line 7 fix: Changed HTML comment syntax to CSS comment syntax */
+
+/* Line 13-16 fix: Corrected link pseudo-class order to LVHA (Link, Visited, Hover, Active) */
+a:link {color: #1A5276;}
+a:visited {color: #7D3C98;}
+a:hover {color: #E67E22;}
+a:active {color: #C0392B;}
+
+/* Line 17 fix: Changed overlined to overline */
+h1 {text-decoration: overline;}
+
+/* Line 18 fix: Added missing colon after color */
+p {color: #333333; text-align: justify;}
+
+/* Line 19 & 41 fix: Changed #intro to .intro to match class="intro" in HTML */
+.intro {
+  font-size: 18px;
+  background-color: #FDEBD0;
+  padding: 10px;
+  border-radius: 4px;
+} /* Line 22 fix: Added missing closing brace for .intro */
+
+/* Line 22 & 44 fix: Added class prefix dot . to highlight selector */
+.highlight {
+  font-weight: bold;
+  color: #C0392B;
+}
+</style>
+</head>
+
+<!-- 
+  Error 1 (Line 7): HTML comment ... inside <style> tag. Fixed to CSS comment /* ... */.
+  Error 2 (Line 9): Invalid CSS value "list-style-type: no;". Fixed to "none;".
+  Error 3 (Lines 14-15): Incorrect pseudo-class order for link states. Moved a:visited before a:hover (LVHA order).
+  Error 4 (Line 17): Invalid property value "text-decoration: overlined;". Fixed to "overline;".
+  Error 5 (Line 18): Missing colon in "color #333333;". Fixed to "color: #333333;".
+  Error 6 (Lines 19-25): Missing closing brace '}' for #intro CSS block, causing .highlight to fail. Added '}'. Also added '.' prefix to class .highlight.
+  Error 7 (Line 34): Missing '#' in href="menu". Fixed to href="#menu" to target section ID.
+  Error 8 (Line 41 & 19): Mismatch between #intro in CSS and class="intro" in HTML. Fixed CSS to selector .intro.
+  Error 9 (Lines 42 & 46): Reused duplicate id="item" on multiple article tags. Changed to class="item".
+  Error 10 (Lines 53-54): <video> tag was missing 'controls' attribute, and type="mp4" was invalid. Fixed to type="video/mp4".
+-->
+
+<body>
+
+<header>
+  <h1>e-Café Campus</h1>
+</header>
+
+<!-- Navigation bar -->
+<nav>
+  <ul>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#feedback">Feedback</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Section 1: Today's Menu -->
+<section id="menu">
+  <h2>Today's Menu</h2>
+  <p class="intro">Freshly brewed coffee and local delights every day.</p>
+  
+  <article class="item">
+    <h3>Kopi Tarik</h3>
+    <!-- Part 2 (Task 6): Added promotion prices with old-price class -->
+    <p>Price: <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+  </article>
+
+  <article class="item">
+    <h3>Nasi Lemak</h3>
+    <!-- Part 2 (Task 6): Added promotion prices with old-price class -->
+    <p>Price: <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+  </article>
+</section>
+
+<!-- Section 2: Promotional Video -->
+<section id="video">
+  <h2>Watch Our Story</h2>
+  
+  <!-- Part 2 (Task 7): Figure wrapper with caption and video controls -->
+  <figure>
+    <video width="400" height="300" controls poster="https://via.placeholder.com/400x300?text=e-Cafe+Story">
+      <source src="cafe.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <figcaption>Take a look inside our campus kitchen and daily operations.</figcaption>
+  </figure>
+</section>
+
+<!-- Part 2 (Task 8): Customer Feedback Section with Form -->
+<section id="feedback">
+  <h2>Customer Feedback</h2>
+  <form class="feedback-form" action="#" method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <!-- Radio selection for Visit Type -->
+    <fieldset class="form-group">
+      <legend>Visit Type:</legend>
+      <label><input type="radio" name="visit_type" value="dine_in" checked> Dine-in</label>
+      <label><input type="radio" name="visit_type" value="take_away"> Take-away</label>
+    </fieldset>
+
+    <!-- Checkboxes for Favourite Items -->
+    <fieldset class="form-group">
+      <legend>Favourite Items:</legend>
+      <label><input type="checkbox" name="favourites" value="kopi_tarik"> Kopi Tarik</label>
+      <label><input type="checkbox" name="favourites" value="nasi_lemak"> Nasi Lemak</label>
+      <label><input type="checkbox" name="favourites" value="teh_o_ice"> Teh O Ais</label>
+      <label><input type="checkbox" name="favourites" value="roti_canai"> Roti Canai</label>
+    </fieldset>
+
+    <button type="submit" class="submit-btn">Submit Feedback</button>
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer id="contact">
+  <p>&copy; 2026 e-Café Campus</p>
+  
+  <!-- Part 2 (Task 9): Address element with mailto link -->
+  <address>
+    Contact us at: <a href="mailto:support@ecafe-campus.edu.my">support@ecafe-campus.edu.my</a>
+  </address>
+</footer>
+
+</body>
+</html>

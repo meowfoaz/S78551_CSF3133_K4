@@ -1,0 +1,148 @@
+/* ==========================================================================
+   NAVIGATION BAR STYLES (Moved from HTML and styled for Task 5)
+   ========================================================================== */
+nav ul {
+  /* Line 9 fix: list-style-type set to none */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1A5276;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;     /* Display links as block */
+  padding: 12px 20px;    /* Padding around links */
+  text-transform: uppercase;     /* Uppercase text */
+  text-decoration: none;     /* Remove link underline */
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+/* Background color change on hover */
+nav a:hover {
+  background-color: #E67E22;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   MENU PROMOTION STYLING (Part 2 - Task 6)
+   ========================================================================== */
+.old-price {
+  text-decoration: line-through;    /* Crossed out old price */
+  color: #888888;
+  margin-right: 8px;
+}
+
+/* ==========================================================================
+   RESPONSIVE VIDEO & FIGURE CAPTION (Part 2 - Task 7)
+   ========================================================================== */
+figure {
+  margin: 15px 0;
+  text-align: center;
+}
+
+video {
+  max-width: 100%;           /* Responsive scaling */
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555555;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   FEEDBACK FORM STYLING (Part 2 - Task 8)
+   ========================================================================== */
+.feedback-form {
+  background-color: #F8F9F9;
+  padding: 20px;
+  border: 1px solid #D5D8DC;
+  border-radius: 6px;
+  max-width: 500px;
+  margin: 15px auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  border: none;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #BDC3C7;
+  border-radius: 4px;
+}
+
+.form-group fieldset {
+  border: 1px solid #BDC3C7;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.form-group legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.form-group label input {
+  margin-right: 6px;
+}
+
+.submit-btn {
+  background-color: #27AE60;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #219150;
+}
+
+/* ==========================================================================
+   FOOTER & ADDRESS STYLING (Part 2 - Task 9)
+   ========================================================================== */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #2C3E50;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+address {
+  font-style: normal;
+  margin-top: 8px;
+}
+
+footer address a {
+  color: #F39C12;
+}
