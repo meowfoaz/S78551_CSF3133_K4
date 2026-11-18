@@ -22,7 +22,7 @@ p {
    2. Header Section Styling
    ========================================= */
 header {
-    background-image: url("header-bg.jpg"); /* Replace with your header banner image */
+    background-image: url("books.jpg"); /* Replace with your header banner image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
