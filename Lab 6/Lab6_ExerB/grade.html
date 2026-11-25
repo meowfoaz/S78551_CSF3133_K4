@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Grade Calculator</title>
+    <!-- Part 2 (Task 9): Link external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+
+    <!-- Fixed Error 1: Added 'return' so returning false prevents page reload -->
+    <form name="gradeForm" onsubmit="return checkMark()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="mark">Mark (0-100):</label>
+        <input type="text" id="mark" name="mark">
+
+        <div class="btn-row">
+            <button type="submit">Check Grade</button>
+            <!-- Part 2 (Task 7): Added Random Mark button -->
+            <button type="button" onclick="generateRandomMark()">Random Mark</button>
+        </div>
+    </form>
+
+    <!-- Result and timestamp display area -->
+    <p id="result"></p>
+
+    <!-- Fixed Error 2: Changed showtable() to showTable() -->
+    <button type="button" onclick="showTable()">Show Grade Table</button>
+
+    <div id="tableContainer"></div>
+
+    <!-- Fixed Error 3: Changed grades.js to grade.js -->
+    <script src="grade.js"></script>
+</body>
+</html>

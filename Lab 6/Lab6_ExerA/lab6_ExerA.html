@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <!-- Link external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section: Displays the game title and brief instructions -->
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+        <p>Enter your name, start the game, and choose your move to beat the computer!</p>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Player Section: Input field for player name and Start Game button -->
+        <section id="player-section">
+            <label for="playerName">Player Name:</label>
+            <input type="text" id="playerName" placeholder="Enter your name">
+            <button onclick="startGame()">Start Game</button>
+        </section>
+
+        <!-- Game Section: Choice buttons (Rock, Paper, Scissors) and image display arena -->
+        <section id="game-section">
+            <div class="choices">
+                <button onclick="playRound('rock')">Rock</button>
+                <button onclick="playRound('paper')">Paper</button>
+                <button onclick="playRound('scissors')">Scissors</button>
+            </div>
+            <div class="arena">
+                <div class="player-box">
+                    <h3 id="playerLabel">You</h3>
+                    <img id="playerImg" src="rock.png" alt="Player Choice">
+                </div>
+                <div class="vs">VS</div>
+                <div class="computer-box">
+                    <h3>Computer</h3>
+                    <img id="computerImg" src="rock.png" alt="Computer Choice">
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Section: Displays round outcome message and live Wins/Losses/Draws scoreboard -->
+        <section id="result-section">
+            <p id="result"></p>
+            <div class="scoreboard">
+                <div class="score-item">Wins: <span id="wins">0</span></div>
+                <div class="score-item">Losses: <span id="losses">0</span></div>
+                <div class="score-item">Draws: <span id="draws">0</span></div>
+            </div>
+        </section>
+
+        <!-- History Section: Table logging each round's moves and outcome -->
+        <section id="history-section">
+            <h2>Match History</h2>
+            <table id="history">
+                <tr>
+                    <th>Round</th>
+                    <th>You</th>
+                    <th>Computer</th>
+                    <th>Result</th>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Controls Section: Buttons to view summary statistics or reset the game -->
+        <section id="controls-section">
+            <button onclick="showSummary()">Show Summary</button>
+            <button onclick="resetGame()">Reset</button>
+        </section>
+    </main>
+
+    <!-- Footer Section: Displays session start date/time and copyright notice -->
+    <footer>
+        <p id="startTime"></p>
+        <p>&copy; 2026 Rock Paper Scissors Game</p>
+    </footer>
+
+    <!-- Link external JavaScript file -->
+    <script src="game.js"></script>
+</body>
+</html>
